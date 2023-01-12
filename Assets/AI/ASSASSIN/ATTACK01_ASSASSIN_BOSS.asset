@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a6c9dfe56f6094a9724f28de4279e8, type: 3}
+  m_Name: ATTACK01_ASSASSIN_BOSS
+  m_EditorClassIdentifier: 
+  actionAnimation: FINAL BOSS ATTACK 02
+  canCombo: 1
+  comboAction: {fileID: 11400000, guid: 763b0c20cc2e88a448cfdd88c0db1603, type: 2}
+  attackScore: 3
+  recoveryTime: 0.5
+  maximumAttackAngle: 50
+  minimumAttackAngle: -50
+  minimumDistanceNeededToAttack: 0.5
+  maximumDistanceNeededToAttack: 2
