@@ -31,6 +31,9 @@ namespace AM
         [Header("Combat Flags")]
         public bool canDoCombo;
 
+        [Header("AI combat settings")]
+        public bool allowToPerformCombos;
+        public float comboLikelyHood;
 
         private void Awake()
         {
@@ -55,8 +58,7 @@ namespace AM
             canDoCombo = enemyAnimationManager.anim.GetBool("canDoCombo");
         }
         private void LateUpdate()
-        {
-           
+        {           
             navMeshAgent.transform.localPosition = Vector3.zero;
             navMeshAgent.transform.localRotation = Quaternion.identity;
         }

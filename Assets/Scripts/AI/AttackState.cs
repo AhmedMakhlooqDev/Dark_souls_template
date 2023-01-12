@@ -24,7 +24,6 @@ namespace AM
                  if (willDoComboOnNextAttack)
                 {
                     willDoComboOnNextAttack = false;
-                    enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
                 }
             }
             
@@ -63,9 +62,12 @@ namespace AM
                             // free AI navmesh movement while playing attack animation on vertical and horizontal
                             enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
                             enemyAnimatorManager.anim.SetFloat("Horizontal", 0, 0.1f, Time.deltaTime);
-                            enemyManager.isPerformingAction = true;
+                            enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
 
-                            if (currentAttack.canCombo)
+                            enemyManager.isPerformingAction = true;
+                            RollForComboChance(enemyManager);
+
+                            if (currentAttack.canCombo && willDoComboOnNextAttack)
                             {
                                 currentAttack = currentAttack.comboAction;
                                 return this;
@@ -173,6 +175,15 @@ namespace AM
 
         }
 
+        private void RollForComboChance(EnemyManager enemyManager)
+        {
+            float comboChance = Random.Range(0, 100);
+
+            if(enemyManager.allowToPerformCombos && comboChance < enemyManager.comboLikelyHood)
+            {
+                willDoComboOnNextAttack = true;
+            }
+        }
     }
 }
 
