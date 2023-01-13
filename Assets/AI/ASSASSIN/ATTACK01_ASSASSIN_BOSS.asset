@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a6c9dfe56f6094a9724f28de4279e8, type: 3}
   m_Name: ATTACK01_ASSASSIN_BOSS
   m_EditorClassIdentifier: 
-  actionAnimation: FINAL BOSS ATTACK 02
+  actionAnimation: Attack1_ASSASIN
   canCombo: 1
   comboAction: {fileID: 11400000, guid: 763b0c20cc2e88a448cfdd88c0db1603, type: 2}
   attackScore: 3

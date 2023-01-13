@@ -14,33 +14,27 @@ namespace AM
         bool willDoComboOnNextAttack = false;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
-
-            if (enemyManager.isPerformingAction && enemyManager.canDoCombo == false)
+            if (enemyManager.isInteracting && enemyManager.canDoCombo == false)
             {
                 return this;
             }
-            else if (enemyManager.isPerformingAction)
+            else if(enemyManager.isInteracting && enemyManager.canDoCombo)
             {
-                 if (willDoComboOnNextAttack)
-                {
-                    willDoComboOnNextAttack = false;
-                }
+                enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
+                willDoComboOnNextAttack = false;
             }
-            
+
             Vector3 targetDirection = enemyManager.currentTarget.transform.position - transform.position;
             float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
             float viewableAngle = Vector3.Angle(targetDirection, transform.forward);
 
             HandleRotateTowardsTarget(enemyManager);
 
-
             //if the enemy is performing an attack return to the combat stance after finishing
-            if (enemyManager.isPerformingAction)
+            if (enemyManager.isPerformingAction && willDoComboOnNextAttack == false)
             {
                 return combatStanceState;
-
-            }
-            
+            }          
 
 
             if (currentAttack != null)

@@ -13,6 +13,10 @@ namespace AM
         public CombatStanceState combatStanceState;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
+
+            if (enemyManager.isInteracting)
+                return this;
+
             // AI is attacking or interacting 
             if (enemyManager.isPerformingAction)
             {

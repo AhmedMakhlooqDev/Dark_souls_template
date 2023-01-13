@@ -14,6 +14,8 @@ namespace AM
         EnemyStats enemyStats;
 
         public bool isPerformingAction;
+        public bool isInteracting;
+
         public State currentState;
         public CharacterStats currentTarget;
         public NavMeshAgent navMeshAgent;
@@ -27,6 +29,7 @@ namespace AM
         public float currentRecoveryTime = 0;
         public float rotationSpeed = 15;
         public float maximumAttackRange = 1.5f;
+        public float viewableAngle;
 
         [Header("Combat Flags")]
         public bool canDoCombo;
@@ -56,6 +59,7 @@ namespace AM
 
             isRotatingWithRootMotion = enemyAnimationManager.anim.GetBool("isRotatingWithRootMotion");
             canDoCombo = enemyAnimationManager.anim.GetBool("canDoCombo");
+            isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
         }
         private void LateUpdate()
         {           

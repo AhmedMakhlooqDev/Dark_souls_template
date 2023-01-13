@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a6c9dfe56f6094a9724f28de4279e8, type: 3}
   m_Name: ATTACK02_ASSASSIN_BOSS
   m_EditorClassIdentifier: 
-  actionAnimation: Final Boss Attack 3
+  actionAnimation: Attack2_ASSASIN
+  canCombo: 0
+  comboAction: {fileID: 11400000, guid: 0f53ebcc98bdc814fb560c6fb7155a25, type: 2}
   attackScore: 3
   recoveryTime: 0.5
   maximumAttackAngle: 50

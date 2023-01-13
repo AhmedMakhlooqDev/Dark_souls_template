@@ -404,6 +404,7 @@ MonoBehaviour:
   lockOnTransform: {fileID: 4070107427344674120}
   isRotatingWithRootMotion: 0
   isPerformingAction: 0
+  isInteracting: 0
   currentState: {fileID: 1336442315750954239}
   currentTarget: {fileID: 0}
   navMeshAgent: {fileID: 0}
@@ -414,6 +415,10 @@ MonoBehaviour:
   currentRecoveryTime: 0
   rotationSpeed: 500
   maximumAttackRange: 1.75
+  viewableAngle: 0
+  canDoCombo: 0
+  allowToPerformCombos: 1
+  comboLikelyHood: 100
 --- !u!114 &3210760705233868051
 MonoBehaviour:
   m_ObjectHideFlags: 0

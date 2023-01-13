@@ -10,8 +10,13 @@ namespace AM
         public PersueTargetState persueTargetState;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
-            HandleRotateTowardsTarget(enemyManager);
+            if (enemyManager.isInteracting)
+                return this;
+
             float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
+
+            HandleRotateTowardsTarget(enemyManager);
+            
             //Strafe Around the Player Or walk Around them
             //check Attack Range
             //if in attack range return Attack State

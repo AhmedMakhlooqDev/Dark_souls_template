@@ -32,7 +32,7 @@ BlendTree:
   m_Name: Blend Tree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 30bfc4750e18efd44b47b0f81e07cff1, type: 2}
+    m_Motion: {fileID: 7400000, guid: 39660d90e9043d94ca913b06b0193235, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -48,7 +48,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 6f51d09b0bbb3f34f8415aee41e7107f, type: 2}
+    m_Motion: {fileID: 7400000, guid: f3e1402fa75d56d4c85067a3d4337d5f, type: 2}
     m_Threshold: 0.4
     m_Position: {x: 0, y: 1}
     m_TimeScale: 0.9
@@ -93,21 +93,21 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: ASSASSIN_BOSS_ATTACK03
-  m_Speed: 0.6
+  m_Name: Attack1_ASSASIN
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 8308433298960733489}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9f55dd5d5e493084fb33ce8b61d1bac5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1967cb0e1ffa9224ca5f2ef41f8a57ae, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -281,43 +281,43 @@ AnimatorStateMachine:
     m_Position: {x: 430, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8232743692392912180}
-    m_Position: {x: 170, y: 240, z: 0}
+    m_Position: {x: 200, y: -140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4963039787394742106}
-    m_Position: {x: 170, y: 290, z: 0}
+    m_Position: {x: 200, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -558353468938897664}
-    m_Position: {x: 170, y: 340, z: 0}
+    m_Position: {x: 200, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8344504970136095592}
-    m_Position: {x: 380, y: 440, z: 0}
+    m_Position: {x: 200, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 724729663596331965}
-    m_Position: {x: 380, y: 390, z: 0}
+    m_Position: {x: 200, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 4382063327469201496}
-    m_Position: {x: 170, y: 390, z: 0}
+    m_Position: {x: 200, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 952718734694975211}
-    m_Position: {x: 170, y: 440, z: 0}
+    m_Position: {x: 200, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8496345683674871418}
-    m_Position: {x: 590, y: 440, z: 0}
+    m_Position: {x: 750, y: 130, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6830739170673083758}
-    m_Position: {x: 800, y: 440, z: 0}
+    m_Position: {x: 750, y: 190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 850048289185289416}
-    m_Position: {x: 1010, y: 440, z: 0}
+    m_Position: {x: 750, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -865260344782913753}
-    m_Position: {x: 170, y: 550, z: 0}
+    m_Position: {x: 200, y: 170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1995953229431258025}
-    m_Position: {x: 380, y: 550, z: 0}
+    m_Position: {x: 200, y: -190, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5430358172587876765}
-    m_Position: {x: 590, y: 550, z: 0}
+    m_Position: {x: 200, y: 270, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -692,8 +692,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Final Boss Attack 3
-  m_Speed: 0.45
+  m_Name: Attack3_ASSASIN
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -2443229963437644}
@@ -706,7 +706,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: cbaab7c81e8bb954c996e7fce4f0089f, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1685a1856da6970478df7a785eeafda5, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -777,7 +777,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 5393364005841061555}
-    m_Position: {x: 150, y: 30, z: 0}
+    m_Position: {x: 150, y: 110, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -1092,7 +1092,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FINAL BOSS ATTACK 02
+  m_Name: Attack2_ASSASIN
   m_Speed: 0.6
   m_CycleOffset: 0
   m_Transitions:
@@ -1106,7 +1106,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: b487e15b327122240878c3c310e509ff, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4706aee32983fa645b7787caeff9e7c0, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
