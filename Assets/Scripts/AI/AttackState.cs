@@ -17,6 +17,8 @@ namespace AM
         public bool hasPerformedAttack = false;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
+            print("Script is Alive (attack)");
+
             float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
             RotateTowardsTargetWhilstAttacking(enemyManager);
 

@@ -20,6 +20,7 @@ namespace AM
             enemyAnimatorManager.anim.SetFloat("Horizontal", horizontalMovementValue, 0.2f, Time.deltaTime);
             attackState.hasPerformedAttack = false;
 
+            print("Combat Stance");
 
             if (enemyManager.isInteracting)
             {
@@ -96,15 +97,28 @@ namespace AM
          
         private void WalkAroundTarget(EnemyAnimatorManager enemyAnimatorManager)
         {
+
+            print("This is working");
             verticalMovementValue = 0.5f;
+            verticalMovementValue = Random.Range(-0.5f, 0.5f);
 
-            horizontalMovementValue = Random.Range(-1, 1);
+            if (verticalMovementValue <= 1 && verticalMovementValue > -0.5f)
+            {
+                verticalMovementValue = 0.5f;
+            }
+            else if (verticalMovementValue >= -1 && verticalMovementValue < 0)
+            {
+                verticalMovementValue = -0.5f;
+            }
 
-            if(horizontalMovementValue <= 1 && horizontalMovementValue >= 0)
+
+            horizontalMovementValue = Random.Range(-0.5f, 1);
+
+            if (horizontalMovementValue <= 1 && horizontalMovementValue >= -0.5f)
             {
                 horizontalMovementValue = 0.5f;
             }
-            else if(horizontalMovementValue >= -1 && horizontalMovementValue < 0)
+            else if (horizontalMovementValue >= -1 && horizontalMovementValue < 0)
             {
                 horizontalMovementValue = -0.5f;
             }

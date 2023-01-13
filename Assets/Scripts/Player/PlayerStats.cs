@@ -17,23 +17,16 @@ namespace AM
         Collider collider;
         
         public float healingTime;
-
         [SerializeField]
         private AudioClip[] clips;
-
         private AudioSource audioSource;
 
         private void Update()
         {
-            Debug.Log(healingTime);
             if (Time.time - healingTime > 3f)
             {
-                giveHealth();
-                
-            }
-            
-           
-           
+                giveHealth();               
+            }                                
         }
 
         private void Awake()

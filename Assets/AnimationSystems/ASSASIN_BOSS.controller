@@ -72,7 +72,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: dfadaef3151091f46bd9400c287bb4c5, type: 3}
+    m_Motion: {fileID: 7400000, guid: 18f9709812a12204c9debf971b85aa6e, type: 2}
     m_Threshold: 0.5
     m_Position: {x: 0.5, y: 0}
     m_TimeScale: 0.6
@@ -80,7 +80,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 929dd50a0bd55c846bf18cdf0536e000, type: 3}
+    m_Motion: {fileID: 7400000, guid: 2fcf88ff1aaf50440a202e8205a29bf1, type: 2}
     m_Threshold: 0.6
     m_Position: {x: -0.5, y: 0}
     m_TimeScale: 0.6
@@ -88,7 +88,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 022647b9578b23143abcfe4680a97d64, type: 3}
+    m_Motion: {fileID: 7400000, guid: 1ddfb656ca0053e45a538839cbd3d058, type: 2}
     m_Threshold: 0.7
     m_Position: {x: 0.5, y: 0.5}
     m_TimeScale: 0.6
@@ -96,7 +96,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 85a317e4fb7e13345a13acf3d4bc1e6a, type: 3}
+    m_Motion: {fileID: 7400000, guid: 98c84695bf87f574c8d442862e5711ae, type: 2}
     m_Threshold: 0.8
     m_Position: {x: -0.5, y: 0.5}
     m_TimeScale: 0.6
@@ -104,7 +104,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 2b20c854ba4b2324f99b4bf3a5431527, type: 3}
+    m_Motion: {fileID: 7400000, guid: b00c13a78d449594bbf3c2b34f13232f, type: 2}
     m_Threshold: 0.9
     m_Position: {x: 0.5, y: -0.5}
     m_TimeScale: 0.6
@@ -112,7 +112,7 @@ BlendTree:
     m_DirectBlendParameter: Vertical
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 7400000, guid: 598f09d73a9fd51488ab54da5f073fdf, type: 3}
+    m_Motion: {fileID: 7400000, guid: 58fa7cbc8c15d2943a9b38ecd1258786, type: 2}
     m_Threshold: 1
     m_Position: {x: -0.5, y: -0.5}
     m_TimeScale: 0.6
@@ -217,7 +217,7 @@ AnimatorState:
   m_StateMachineBehaviours:
   - {fileID: -149255058613716354}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -305,7 +305,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7906867981227407191}
-    m_Position: {x: 430, y: 220, z: 0}
+    m_Position: {x: 440, y: 220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8232743692392912180}
     m_Position: {x: 200, y: -140, z: 0}
@@ -350,9 +350,9 @@ AnimatorStateMachine:
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 440, y: 100, z: 0}
-  m_EntryPosition: {x: 440, y: 150, z: 0}
-  m_ExitPosition: {x: 440, y: 60, z: 0}
+  m_AnyStatePosition: {x: 460, y: 80, z: 0}
+  m_EntryPosition: {x: 460, y: 130, z: 0}
+  m_ExitPosition: {x: 460, y: 40, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -7906867981227407191}
 --- !u!1101 &-5420883775039968991
@@ -457,7 +457,7 @@ AnimatorState:
   - {fileID: 804564108039419369}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -554,31 +554,37 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isInteracting
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: canDoCombo
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isRotatingWithRootMotion
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: canRotate
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -734,7 +740,7 @@ AnimatorState:
   - {fileID: -2443229963437644}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -787,7 +793,7 @@ AnimatorState:
   - {fileID: 5654008912244354278}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -993,7 +999,7 @@ AnimatorState:
   - {fileID: 7246713358439048793}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -1134,7 +1140,7 @@ AnimatorState:
   - {fileID: 806216299045913207}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 1
+  m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
