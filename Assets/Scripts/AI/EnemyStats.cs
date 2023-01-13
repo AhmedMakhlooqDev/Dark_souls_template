@@ -23,14 +23,15 @@ namespace AM
             cameraHandler = GetComponentInChildren<CameraHandler>();
             inputHander = GetComponentInChildren<InputHander>();           
             enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
+            maxHealth = setMaxHealthFromHealthLevel();
+            currentHealth = maxHealth;
         }
 
         // Start is called before the first frame update
         void Start()
         {
 
-            maxHealth = setMaxHealthFromHealthLevel();
-            currentHealth = maxHealth;
+            
             enemyHealthBar.SetMaxHealth(maxHealth);
             
         }

@@ -148,6 +148,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: canRotate
   status: 1
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1102 &-8232743692392912180
@@ -196,7 +200,7 @@ AnimatorState:
   - {fileID: -8438178249992219089}
   - {fileID: -4773455145047130625}
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -223,6 +227,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: canDoCombo
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1107 &-6747223367783001872
@@ -359,6 +367,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: isInteracting
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1107 &-6243301838251404533
@@ -486,6 +498,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: isInAir
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1102 &-4576845122573973265
@@ -502,7 +518,7 @@ AnimatorState:
   - {fileID: 5113409922731777131}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0
@@ -529,6 +545,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: 
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1101 &-3615035015555454955
@@ -668,6 +688,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: isInvunerable
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1101 &-770143175047317141
@@ -760,6 +784,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: isInteracting
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!91 &9100000
@@ -776,61 +804,61 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Horizontal
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isInteracting
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: canDoCombo
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isInvunerable
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: canRotate
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isUsingRightHand
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isUsingLeftHand
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isBlocking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: isInAir
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -953,6 +981,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetBool: isInAir
   status: 0
+  isInteractingBool: isInteracting
+  isInteractingStatus: 0
+  canRotateBool: canRotate
+  canRotateStatus: 1
   isRotatingWithRootMotion: isRotatingWithRootMotion
   isRotatingWithRootMotionStatus: 0
 --- !u!1102 &2196770553931011093
@@ -1162,7 +1194,7 @@ AnimatorState:
   m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 0

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: ATTACK03_ASSASSIN_BOSS
   m_EditorClassIdentifier: 
   actionAnimation: Attack3_ASSASIN
-  canCombo: 0
-  comboAction: {fileID: 0}
+  canCombo: 1
+  comboAction: {fileID: 11400000, guid: 0f53ebcc98bdc814fb560c6fb7155a25, type: 2}
   attackScore: 3
   recoveryTime: 1.5
   maximumAttackAngle: 50
