@@ -20,33 +20,21 @@ namespace AM
 
             HandleRotateTowardsTarget(enemyManager);
 
-            
-           
-
             if (enemyManager.isInteracting)
                 return this;
 
-            // AI is attacking or interacting 
-            if (enemyManager.isPerformingAction)
+            if (enemyManager.isPreformingAction)
             {
-                //set vertical locomotion to 0 to Freeze AI movement
                 enemyAnimatorManager.anim.SetFloat("Vertical", 0, 0.1f, Time.deltaTime);
                 return this;
             }
-              
 
-            
-
-            // if the player is out of the attack range change vertical float to 1 playing the run anmation and chasing the target
             if (distanceFromTarget > enemyManager.maximumAggroRadius)
             {
-                enemyAnimatorManager.anim.SetFloat("Vertical", 1f, 0.1f, Time.deltaTime);
+                enemyAnimatorManager.anim.SetFloat("Vertical", 1, 0.1f, Time.deltaTime);
             }
-           
 
-            
-
-            if(distanceFromTarget <= enemyManager.maximumAggroRadius)
+            if (distanceFromTarget <= enemyManager.maximumAggroRadius)
             {
                 return combatStanceState;
             }
@@ -60,8 +48,8 @@ namespace AM
 
         private void HandleRotateTowardsTarget(EnemyManager enemyManager)
         {
-            //handle rotation while performing actions
-            if (enemyManager.isPerformingAction)
+            //Rotate manually
+            if (enemyManager.isPreformingAction)
             {
                 Vector3 direction = enemyManager.currentTarget.transform.position - transform.position;
                 direction.y = 0;
@@ -73,9 +61,9 @@ namespace AM
                 }
 
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, enemyManager.rotationSpeed / Time.deltaTime);
-
+                enemyManager.transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, enemyManager.rotationSpeed / Time.deltaTime);
             }
+            //Rotate with pathfinding (navmesh)
             else
             {
                 Vector3 relativeDirection = transform.InverseTransformDirection(enemyManager.navMeshAgent.desiredVelocity);
@@ -84,11 +72,11 @@ namespace AM
                 enemyManager.navMeshAgent.enabled = true;
                 enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
                 enemyManager.enemyRigidBody.velocity = targetVelocity;
-                enemyManager.transform.rotation = Quaternion.Slerp(enemyManager.transform.rotation, enemyManager.navMeshAgent.transform.rotation, enemyManager.rotationSpeed / Time.deltaTime);
+                enemyManager.transform.rotation = Quaternion.Lerp(enemyManager.transform.rotation, enemyManager.navMeshAgent.transform.rotation, enemyManager.rotationSpeed / Time.deltaTime);
             }
+        }
 
 
         }
     }
-}
 

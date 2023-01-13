@@ -17,17 +17,16 @@ namespace AM
         public bool hasPerformedAttack = false;
         public override State Tick(EnemyManager enemyManager, EnemyStats enemyStats, EnemyAnimatorManager enemyAnimatorManager)
         {
-            print("Script is Alive (attack)");
-
             float distanceFromTarget = Vector3.Distance(enemyManager.currentTarget.transform.position, enemyManager.transform.position);
+
             RotateTowardsTargetWhilstAttacking(enemyManager);
 
-            if(distanceFromTarget > enemyManager.maximumAggroRadius)
+            if (distanceFromTarget > enemyManager.maximumAggroRadius)
             {
                 return persueTargetState;
             }
 
-            if(willDoComboOnNextAttack && enemyManager.canDoCombo)
+            if (willDoComboOnNextAttack && enemyManager.canDoCombo)
             {
                 AttackTargetWithCombo(enemyAnimatorManager, enemyManager);
             }
@@ -38,22 +37,39 @@ namespace AM
                 RollForComboChance(enemyManager);
             }
 
-            if(willDoComboOnNextAttack && hasPerformedAttack)
+            if (willDoComboOnNextAttack && hasPerformedAttack)
             {
-                return this;
+                return this; //GOES BACK UP TO PREFORM THE COMBO
             }
 
             return rotateTowardsTargetState;
         }
 
+        private void AttackTarget(EnemyAnimatorManager enemyAnimatorManager, EnemyManager enemyManager)
+        {
+            enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
+            enemyManager.currentRecoveryTime = currentAttack.recoveryTime;
+            hasPerformedAttack = true;
+        }
+
+        private void AttackTargetWithCombo(EnemyAnimatorManager enemyAnimatorManager, EnemyManager enemyManager)
+        {
+            willDoComboOnNextAttack = false;
+            enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
+            enemyManager.currentRecoveryTime = currentAttack.recoveryTime;
+            currentAttack = null;
+        }
+
+
         private void RotateTowardsTargetWhilstAttacking(EnemyManager enemyManager)
         {
+            //Rotate manually
             if (enemyManager.canRotate && enemyManager.isInteracting)
             {
                 Vector3 direction = enemyManager.currentTarget.transform.position - transform.position;
                 direction.y = 0;
                 direction.Normalize();
-                
+
                 if (direction == Vector3.zero)
                 {
                     direction = transform.forward;
@@ -61,9 +77,8 @@ namespace AM
 
                 Quaternion targetRotation = Quaternion.LookRotation(direction);
                 enemyManager.transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, enemyManager.rotationSpeed / Time.deltaTime);
-
             }
-            
+
 
 
         }
@@ -86,20 +101,7 @@ namespace AM
                 }
             }
         }
-        private void AttackTarget(EnemyAnimatorManager enemyAnimatorManager, EnemyManager enemyManager)
-        {
-            enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
-            enemyManager.currentRecoveryTime = currentAttack.recoveryTime;
-            hasPerformedAttack = true;
-        }
 
-        private void AttackTargetWithCombo(EnemyAnimatorManager enemyAnimatorManager, EnemyManager enemyManager)
-        {
-            enemyAnimatorManager.PlayerTargetAnimation(currentAttack.actionAnimation, true);
-            enemyManager.currentRecoveryTime = currentAttack.recoveryTime;
-            willDoComboOnNextAttack = false;
-            currentAttack = null;
-        }
     }
 }
 

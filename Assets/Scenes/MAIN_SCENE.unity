@@ -19119,13 +19119,18 @@ PrefabInstance:
       objectReference: {fileID: 1360028555}
     - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
+      propertyPath: rotationSpeed
+      value: 30.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
       propertyPath: viewableAngle
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
       propertyPath: maximumAggroRadius
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3210760705233868051, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}

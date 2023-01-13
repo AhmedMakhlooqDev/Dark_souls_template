@@ -61,7 +61,7 @@ namespace AM
         private void HandleRotateTowardsTarget(EnemyManager enemyManager)
         {
             //handle rotation while performing actions
-            if (enemyManager.isPerformingAction)
+            if (enemyManager.isPreformingAction)
             {
                 Vector3 direction = enemyManager.currentTarget.transform.position - transform.position;
                 direction.y = 0;

@@ -17,7 +17,7 @@ namespace AM
             anim.CrossFade(targetAnim, 0.2f);
         }      
 
-        public void PlayTaargetAnimationWithRootRotation(string targetAnim, bool isInteracting)
+        public void PlayTargetAnimationWithRootRotation(string targetAnim, bool isInteracting)
         {
             anim.applyRootMotion = isInteracting;
             anim.SetBool("isRotatingWithRootMotion", true);

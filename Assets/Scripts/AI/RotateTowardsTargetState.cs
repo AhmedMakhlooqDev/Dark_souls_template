@@ -19,31 +19,29 @@ namespace AM
             float viewableAngle = Vector3.SignedAngle(targetDirection, enemyManager.transform.forward, Vector3.up);
 
             if (enemyManager.isInteracting)
-                return this;
+                return this; //When we enter the state we will still be interacting from the attack animation so we pause here until it has finished
 
-            if(viewableAngle >= 100 && viewableAngle <= 180 && !enemyManager.isPerformingAction)
+            if (viewableAngle >= 100 && viewableAngle <= 180 && !enemyManager.isInteracting)
             {
-                enemyAnimatorManager.PlayTaargetAnimationWithRootRotation("TurnBehind", true);
+                enemyAnimatorManager.PlayTargetAnimationWithRootRotation("Turn Behind", true);
                 return combatStanceState;
             }
-            else if (viewableAngle >= -101 && viewableAngle <= -180 && !enemyManager.isPerformingAction)
+            else if (viewableAngle <= -101 && viewableAngle >= -180 && !enemyManager.isInteracting)
             {
-                enemyAnimatorManager.PlayTaargetAnimationWithRootRotation("TurnBehind", true);
+                enemyAnimatorManager.PlayTargetAnimationWithRootRotation("Turn Behind", true);
                 return combatStanceState;
-
             }
-            else if (viewableAngle >= -45 && viewableAngle <= -100 && !enemyManager.isPerformingAction)
+            else if (viewableAngle <= -45 && viewableAngle >= -100 && !enemyManager.isInteracting)
             {
-                enemyAnimatorManager.PlayTaargetAnimationWithRootRotation("TurnRight", true);
+                enemyAnimatorManager.PlayTargetAnimationWithRootRotation("Turn Right", true);
                 return combatStanceState;
-
             }
-            else if (viewableAngle >= 45 && viewableAngle <= 100 && !enemyManager.isPerformingAction)
+            else if (viewableAngle >= 45 && viewableAngle <= 100 && !enemyManager.isInteracting)
             {
-                enemyAnimatorManager.PlayTaargetAnimationWithRootRotation("TurnLeft", true);
+                enemyAnimatorManager.PlayTargetAnimationWithRootRotation("Turn Left", true);
                 return combatStanceState;
-
             }
+
             return combatStanceState;
         }
     }

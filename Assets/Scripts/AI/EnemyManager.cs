@@ -13,7 +13,7 @@ namespace AM
         EnemyAnimatorManager enemyAnimationManager;
         EnemyStats enemyStats;
 
-        public bool isPerformingAction;
+        public bool isPreformingAction;
         public bool isInteracting;
 
         public State currentState;
@@ -94,11 +94,11 @@ namespace AM
                 currentRecoveryTime -= Time.deltaTime;
             }
 
-            if (isPerformingAction)
+            if (isPreformingAction)
             {
                 if (currentRecoveryTime <= 0)
                 {
-                    isPerformingAction = false;
+                    isPreformingAction = false;
                 }
             }
         }
