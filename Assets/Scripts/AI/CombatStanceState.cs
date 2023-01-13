@@ -20,7 +20,6 @@ namespace AM
             enemyAnimatorManager.anim.SetFloat("Horizontal", horizontalMovementValue, 0.2f, Time.deltaTime);
             attackState.hasPerformedAttack = false;
 
-            print("Combat Stance");
 
             if (enemyManager.isInteracting)
             {
@@ -58,71 +57,7 @@ namespace AM
             return this;
         }
 
-        private void HandleRotateTowardsTarget(EnemyManager enemyManager)
-        {
-            //handle rotation while performing actions
-            if (enemyManager.isPreformingAction)
-            {
-                Vector3 direction = enemyManager.currentTarget.transform.position - transform.position;
-                direction.y = 0;
-                direction.Normalize();
-
-                if (direction == Vector3.zero)
-                {
-                    direction = transform.forward;
-                }
-
-                Quaternion targetRotation = Quaternion.LookRotation(direction);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, enemyManager.rotationSpeed / Time.deltaTime);
-
-            }
-            else
-            {
-                Vector3 relativeDirection = transform.InverseTransformDirection(enemyManager.navMeshAgent.desiredVelocity);
-                Vector3 targetVelocity = enemyManager.enemyRigidBody.velocity;
-
-                enemyManager.navMeshAgent.enabled = true;
-                enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
-                enemyManager.enemyRigidBody.velocity = targetVelocity;
-                enemyManager.transform.rotation = Quaternion.Slerp(enemyManager.transform.rotation, enemyManager.navMeshAgent.transform.rotation, enemyManager.rotationSpeed / Time.deltaTime);
-            }
-
-
-        }
-
-        private void DecideCirclingAction(EnemyAnimatorManager enemyAnimatorManager)
-        {
-            WalkAroundTarget(enemyAnimatorManager);
-        }
-         
-        private void WalkAroundTarget(EnemyAnimatorManager enemyAnimatorManager)
-        {
-
-            print("This is working");
-            verticalMovementValue = 0.5f;
-            verticalMovementValue = Random.Range(-0.5f, 0.5f);
-
-            if (verticalMovementValue <= 1 && verticalMovementValue > -0.5f)
-            {
-                verticalMovementValue = 0.5f;
-            }
-            else if (verticalMovementValue >= -1 && verticalMovementValue < 0)
-            {
-                verticalMovementValue = -0.5f;
-            }
-
-
-            horizontalMovementValue = Random.Range(-0.5f, 1);
-
-            if (horizontalMovementValue <= 1 && horizontalMovementValue >= -0.5f)
-            {
-                horizontalMovementValue = 0.5f;
-            }
-            else if (horizontalMovementValue >= -1 && horizontalMovementValue < 0)
-            {
-                horizontalMovementValue = -0.5f;
-            }
-        }
+              
 
         private void GetNewAttack(EnemyManager enemyManager)
         {
@@ -176,7 +111,70 @@ namespace AM
 
         }
 
+        private void HandleRotateTowardsTarget(EnemyManager enemyManager)
+        {
+            //handle rotation while performing actions
+            if (enemyManager.isPreformingAction)
+            {
+                Vector3 direction = enemyManager.currentTarget.transform.position - transform.position;
+                direction.y = 0;
+                direction.Normalize();
 
+                if (direction == Vector3.zero)
+                {
+                    direction = transform.forward;
+                }
+
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, enemyManager.rotationSpeed / Time.deltaTime);
+
+            }
+            else
+            {
+                Vector3 relativeDirection = transform.InverseTransformDirection(enemyManager.navMeshAgent.desiredVelocity);
+                Vector3 targetVelocity = enemyManager.enemyRigidBody.velocity;
+
+                enemyManager.navMeshAgent.enabled = true;
+                enemyManager.navMeshAgent.SetDestination(enemyManager.currentTarget.transform.position);
+                enemyManager.enemyRigidBody.velocity = targetVelocity;
+                enemyManager.transform.rotation = Quaternion.Slerp(enemyManager.transform.rotation, enemyManager.navMeshAgent.transform.rotation, enemyManager.rotationSpeed / Time.deltaTime);
+            }
+
+
+        }
+
+        private void DecideCirclingAction(EnemyAnimatorManager enemyAnimatorManager)
+        {
+            WalkAroundTarget(enemyAnimatorManager);
+        }
+        private void WalkAroundTarget(EnemyAnimatorManager enemyAnimatorManager)
+        {
+
+            print("This is working");
+            //verticalMovementValue = 0.5f;
+            verticalMovementValue = Random.Range(-0.5f, 0.5f);
+
+            if (verticalMovementValue <= 1 && verticalMovementValue > -0.5f)
+            {
+                verticalMovementValue = 0.5f;
+            }
+            else if (verticalMovementValue >= -1 && verticalMovementValue < 0)
+            {
+                verticalMovementValue = -0.5f;
+            }
+
+
+            horizontalMovementValue = Random.Range(-0.5f, 1);
+
+            if (horizontalMovementValue <= 1 && horizontalMovementValue >= -0.5f)
+            {
+                horizontalMovementValue = 0.5f;
+            }
+            else if (horizontalMovementValue >= -1 && horizontalMovementValue < 0)
+            {
+                horizontalMovementValue = -0.5f;
+            }
+        }
     }
 }
 

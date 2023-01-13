@@ -19125,12 +19125,22 @@ PrefabInstance:
     - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
       propertyPath: viewableAngle
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
       propertyPath: maximumAggroRadius
-      value: 1.5
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: maximumDetectionAngle
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210760705233868050, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: minimumDetectionAngle
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 3210760705233868051, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
