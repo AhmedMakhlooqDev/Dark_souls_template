@@ -24,6 +24,14 @@ namespace AM
             anim.SetBool("isInteracting", isInteracting);
             anim.CrossFade(targetAnim, 0.2f);
         }
+
+        public void PlayTaargetAnimationWithRootRotation(string targetAnim, bool isInteracting)
+        {
+            anim.applyRootMotion = isInteracting;
+            anim.SetBool("isRotatingWithRootMotion", true);
+            anim.SetBool("isInteracting", isInteracting);
+            anim.CrossFade(targetAnim, 0.2f);
+        }
     }
 }
 

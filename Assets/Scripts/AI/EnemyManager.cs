@@ -28,7 +28,7 @@ namespace AM
         public float minimumDetectionAngle = -50;
         public float currentRecoveryTime = 0;
         public float rotationSpeed = 15;
-        public float maximumAttackRange = 1.5f;
+        public float maximumAggroRadius = 1.5f;
         public float viewableAngle;
 
         [Header("Combat Flags")]
@@ -60,6 +60,7 @@ namespace AM
             isRotatingWithRootMotion = enemyAnimationManager.anim.GetBool("isRotatingWithRootMotion");
             canDoCombo = enemyAnimationManager.anim.GetBool("canDoCombo");
             isInteracting = enemyAnimationManager.anim.GetBool("isInteracting");
+            canRotate = enemyAnimationManager.anim.GetBool("canRotate");
         }
         private void LateUpdate()
         {           

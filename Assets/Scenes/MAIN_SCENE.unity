@@ -4556,7 +4556,7 @@ PrefabInstance:
     - target: {fileID: 766756864496306227, guid: 03fd9a1acb1e6da48aeea9fc5dfeda9a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.61
+      value: -44.99
       objectReference: {fileID: 0}
     - target: {fileID: 766756864496306227, guid: 03fd9a1acb1e6da48aeea9fc5dfeda9a,
         type: 3}
@@ -4566,7 +4566,7 @@ PrefabInstance:
     - target: {fileID: 766756864496306227, guid: 03fd9a1acb1e6da48aeea9fc5dfeda9a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.91
+      value: 44.81
       objectReference: {fileID: 0}
     - target: {fileID: 766756864496306227, guid: 03fd9a1acb1e6da48aeea9fc5dfeda9a,
         type: 3}
@@ -4626,6 +4626,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 418599282}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &722713295 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1336442316217721415, guid: c735ebbb2fd4046449199bc9295134ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043011962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2652cdf202640e34e8aa2812fb5c36b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749453803
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,6 +14963,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1285021285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1292038426, guid: c735ebbb2fd4046449199bc9295134ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043011962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58212590139625f40bcfda188ccc1b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1322018405
 Mesh:
   m_ObjectHideFlags: 0
@@ -16698,6 +16722,63 @@ PrefabInstance:
       propertyPath: audio1
       value: 
       objectReference: {fileID: 418599284}
+    - target: {fileID: 1292038426, guid: c735ebbb2fd4046449199bc9295134ac, type: 3}
+      propertyPath: combatStanceState
+      value: 
+      objectReference: {fileID: 722713295}
+    - target: {fileID: 1051517528780142324, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: m_Height
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051517528780142324, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051517528780142324, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336442316217721415, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: enemyAttacks.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1336442316217721415, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: enemyAttacks.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f53ebcc98bdc814fb560c6fb7155a25,
+        type: 2}
+    - target: {fileID: 1336442316217721415, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: enemyAttacks.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 763b0c20cc2e88a448cfdd88c0db1603,
+        type: 2}
+    - target: {fileID: 1336442316217721415, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: enemyAttacks.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d355fc07f4042c45ada1485bd12dbee,
+        type: 2}
+    - target: {fileID: 1336442316436199707, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: rotateTowardsTargetState
+      value: 
+      objectReference: {fileID: 1285021285}
+    - target: {fileID: 1336442317425468735, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: persueTargetState
+      value: 
+      objectReference: {fileID: 2092856668}
+    - target: {fileID: 1336442317425468735, guid: c735ebbb2fd4046449199bc9295134ac,
+        type: 3}
+      propertyPath: rotateTowardsTargetState
+      value: 
+      objectReference: {fileID: 1285021285}
     - target: {fileID: 3210760705233868048, guid: c735ebbb2fd4046449199bc9295134ac,
         type: 3}
       propertyPath: m_RootOrder
@@ -17062,6 +17143,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &2092856668 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1336442316436199707, guid: c735ebbb2fd4046449199bc9295134ac,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043011962}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a03f116f79b84b44a8cfcc995d5f37f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &869517170940719010 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 5870142494390982334, guid: f14e9cc094867944fb343cebe8a45732,
