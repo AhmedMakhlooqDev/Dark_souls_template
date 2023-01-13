@@ -23,6 +23,11 @@ namespace AM
             enemyStats = GetComponent<EnemyStats>();
         }
 
+        public void UpdateBossHealthBar(int currentHealth)
+        {
+            uIBossHealthBar.SetBossCurrentHealth(currentHealth);
+        }
+
     }
 }
 

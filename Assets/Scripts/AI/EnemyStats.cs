@@ -15,7 +15,9 @@ namespace AM
         NavMeshAgent navMeshAgent;
         public int soulsRewardOnDeath;
         EnemyAnimatorManager enemyAnimatorManager;
+        EnemyBossManager enemyBossManager;
 
+        public bool isBoss;
 
         private void Awake()
         {
@@ -25,15 +27,18 @@ namespace AM
             enemyAnimatorManager = GetComponentInChildren<EnemyAnimatorManager>();
             maxHealth = setMaxHealthFromHealthLevel();
             currentHealth = maxHealth;
+            enemyBossManager = GetComponent<EnemyBossManager>();
         }
 
         // Start is called before the first frame update
         void Start()
         {
 
-            
-            enemyHealthBar.SetMaxHealth(maxHealth);
-            
+            if (!isBoss)
+            {
+                enemyHealthBar.SetMaxHealth(maxHealth);
+            }
+
         }
 
         private int setMaxHealthFromHealthLevel()
@@ -46,9 +51,17 @@ namespace AM
         {
             if (isDead)
                 return;
-            
+
+            if (!isBoss)
+            {
+                enemyHealthBar.SetHealth(currentHealth);
+            }
+            else if(isBoss && enemyBossManager != null)
+            {
+                enemyBossManager.UpdateBossHealthBar(currentHealth);
+            }
+
             currentHealth = currentHealth - damage;
-            enemyHealthBar.SetHealth(currentHealth);
             
             enemyAnimatorManager.PlayerTargetAnimation("Hit", true);
 
