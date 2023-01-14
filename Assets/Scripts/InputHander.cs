@@ -69,8 +69,8 @@ namespace AM
                
                 inputActions.PlayerActions.RB.performed += i => rb_input = true;
                 inputActions.PlayerActions.RT.performed += i => rt_input = true;
-                inputActions.PlayerActions.LB.performed += i => lb_input = false;
-                inputActions.PlayerActions.LB.canceled += i => lb_input = true;
+                inputActions.PlayerActions.LB.performed += i => lb_input = true;
+                inputActions.PlayerActions.LB.canceled += i => lb_input = false;
                 inputActions.PlayerMovement.DPadRight.performed += i => d_pad_Right = true;
                 inputActions.PlayerMovement.DPadLeft.performed += i => d_pad_Left = true;
                 inputActions.PlayerMovement.AorX.performed += i => a_input = true;
