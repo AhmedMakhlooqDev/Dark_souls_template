@@ -254,7 +254,7 @@ namespace AM
                 rigidbody.AddForce(moveDirection * fallingSpeed / 10f);
             }
 
-            Vector3 dir = -moveDirection;
+            Vector3 dir = moveDirection;
             dir.Normalize();
             origin = origin + dir * groundDirectionRayDistance;
             targetPosition = myTransform.position;

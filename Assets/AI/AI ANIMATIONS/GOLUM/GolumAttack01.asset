@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: GolumAttack01
   m_EditorClassIdentifier: 
   actionAnimation: Rogue_Second_Attack
+  canCombo: 1
+  comboAction: {fileID: 11400000, guid: ed7d2de5e06acec4c8f03136d25d67b0, type: 2}
   attackScore: 3
   recoveryTime: 2
   maximumAttackAngle: 35
