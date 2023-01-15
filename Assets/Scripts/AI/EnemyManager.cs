@@ -30,6 +30,8 @@ namespace AM
         public float rotationSpeed = 15;
         public float maximumAggroRadius = 1.5f;
         public float viewableAngle;
+        public float pursueDistance = 4;
+
 
         [Header("Combat Flags")]
         public bool canDoCombo;

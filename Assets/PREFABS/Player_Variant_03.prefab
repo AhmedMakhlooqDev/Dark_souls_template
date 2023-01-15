@@ -1485,7 +1485,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6171670175679832662
 Transform:
   m_ObjectHideFlags: 0
@@ -2417,7 +2417,7 @@ GameObject:
   - component: {fileID: 3898584676412801492}
   m_Layer: 9
   m_Name: Player_Variant_03
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2429,7 +2429,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3898584677172218698}
-  m_LocalRotation: {x: -0, y: -0.105552666, z: -0, w: 0.99441373}
+  m_LocalRotation: {x: 0, y: -0.10555256, z: 0, w: 0.9944138}
   m_LocalPosition: {x: 2.2777328, y: 0.54, z: -14.093921}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2438,7 +2438,7 @@ Transform:
   - {fileID: 7025301849675625260}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -12.118001, z: 0}
 --- !u!114 &3898584677172218693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2518,7 +2518,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &3898584677172218696
@@ -2549,6 +2549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lockOnTransform: {fileID: 7025301849675625260}
   isRotatingWithRootMotion: 0
+  canRotate: 0
   isInteracting: 0
   InteractableUIGameObject: {fileID: 0}
   ItemInteractableUIGameObject: {fileID: 0}
@@ -4748,7 +4749,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8558803722018835926
 Transform:
   m_ObjectHideFlags: 0
