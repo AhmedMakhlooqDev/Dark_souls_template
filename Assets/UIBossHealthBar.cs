@@ -9,18 +9,17 @@ namespace AM
     public class UIBossHealthBar : MonoBehaviour
     {
         public TextMeshProUGUI bossName;
-        Slider slider;
-
-
-        private void Start()
-        {
-            SetUIHealthBarToInActive();
-        }
+        public Slider slider;
 
         private void Awake()
         {
             slider = GetComponentInChildren<Slider>();
             bossName = GetComponentInChildren<TextMeshProUGUI>();
+        }
+
+        private void Start()
+        {
+            SetHealthBarToInactive();
         }
 
         public void SetBossName(string name)
@@ -33,7 +32,7 @@ namespace AM
             slider.gameObject.SetActive(true);
         }
 
-        public void SetUIHealthBarToInActive()
+        public void SetHealthBarToInactive()
         {
             slider.gameObject.SetActive(false);
         }

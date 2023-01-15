@@ -14,6 +14,7 @@ namespace AM
         public Collider collider;
         NavMeshAgent navMeshAgent;
         public int soulsRewardOnDeath;
+
         EnemyAnimatorManager enemyAnimatorManager;
         EnemyBossManager enemyBossManager;
 
@@ -49,14 +50,13 @@ namespace AM
 
         public void TakeDamage(int damage)
         {
-            if (isDead)
-                return;
 
             if (!isBoss)
             {
                 enemyHealthBar.SetHealth(currentHealth);
             }
-            else if(isBoss && enemyBossManager != null)
+
+            else
             {
                 enemyBossManager.UpdateBossHealthBar(currentHealth);
             }
@@ -71,21 +71,6 @@ namespace AM
             }
         }
 
-
-        public void TakeDamageBoss(int damage)
-        {
-            if (isDead)
-                return;
-
-            currentHealth = currentHealth - damage;
-            enemyHealthBar.SetHealth(currentHealth);
-            audioSource.Play();
-
-            if (currentHealth <= 0)
-            {
-                HandleDeath();
-            }
-        }
 
         private void HandleDeath()
         {

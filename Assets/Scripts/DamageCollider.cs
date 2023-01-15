@@ -56,15 +56,7 @@ namespace AM
                 }
             }
 
-            if (collision.tag == "Boss")
-            {
-                EnemyStats enemyStats = collision.GetComponent<EnemyStats>();
-
-                if (enemyStats != null)
-                {
-                    enemyStats.TakeDamageBoss(currentWeaponDamage);
-                }
-            }
+            
         }
     }
 }

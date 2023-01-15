@@ -11,17 +11,19 @@ namespace AM
         UIBossHealthBar uIBossHealthBar;
         EnemyStats enemyStats;
 
-        void Start()
+        private void Awake()
+        {
+            uIBossHealthBar = FindObjectOfType<UIBossHealthBar>();
+            enemyStats = GetComponent<EnemyStats>();
+        }
+
+        private void Start()
         {
             uIBossHealthBar.SetBossName(bossName);
             uIBossHealthBar.SetBossMaxHealth(enemyStats.maxHealth);
         }
 
-        private void Awake()
-        {          
-            uIBossHealthBar = FindObjectOfType<UIBossHealthBar>();
-            enemyStats = GetComponent<EnemyStats>();
-        }
+       
 
         public void UpdateBossHealthBar(int currentHealth)
         {
