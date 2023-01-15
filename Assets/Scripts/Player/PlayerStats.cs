@@ -14,7 +14,7 @@ namespace AM
         public GameObject youDied;
         public AudioSource deathSFX;
         public AudioSource deathScreamSFX;
-        Collider collider;
+        Collider colliderPlayer;
         
         public float healingTime;
         [SerializeField]
@@ -23,10 +23,10 @@ namespace AM
 
         private void Update()
         {
-            if (Time.time - healingTime > 3f)
-            {
-                giveHealth();               
-            }                                
+            //if (Time.time - healingTime > 3f)
+            //{
+            //    giveHealth();               
+            //}                                
         }
 
         private void Awake()
@@ -34,13 +34,13 @@ namespace AM
             playerManager = GetComponent<PlayerManager>();
             audioSource = GetComponent<AudioSource>();
             animatorHandler = GetComponentInChildren<AnimatorHandler>();
-            collider = GetComponent<Collider>();
+            colliderPlayer = GetComponent<Collider>();
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            healingTime = 0f;
+            //healingTime = 0f;
             maxHealth = setMaxHealthFromHealthLevel();
             currentHealth = maxHealth;
             healthBar.SetMaxHealth(maxHealth);
@@ -89,7 +89,7 @@ namespace AM
             youDied.SetActive(true);
             deathSFX.Play();
             deathScreamSFX.Play();
-            collider.enabled = false;
+            colliderPlayer.enabled = false;
         }
 
         public void AddSouls(int souls)

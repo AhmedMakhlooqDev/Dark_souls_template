@@ -8,8 +8,8 @@ namespace AM
     public class WeaponSlotManager : MonoBehaviour
     {
         PlayerManager playerManager;
-        WeaponHolderSlot leftHandSlot;
-        WeaponHolderSlot rightHandSlot;
+        public WeaponHolderSlot leftHandSlot;
+        public WeaponHolderSlot rightHandSlot;
         DamageCollider leftHandDamageCollider;
         DamageCollider rightHandDamageCollider;
 
