@@ -539,7 +539,7 @@ ModelImporter:
     second: upperarm_twist_01_r
   - first:
       74: 7400000
-    second: Take 001
+    second: Frank_RPG_Assassin_Combo01_3
   - first:
       95: 9500000
     second: //RootNode
@@ -595,7 +595,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Take 001
+      name: Frank_RPG_Assassin_Combo01_3
       takeName: Take 001
       internalID: 0
       firstFrame: 0
